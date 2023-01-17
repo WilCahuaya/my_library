@@ -1,20 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+<ion-slides pager="true" [options]="slideOpt">
+  <ion-slide name="one">
+    <ion-icon name="close"></ion-icon>
+    <h1>HTML</h1>
+    <h2>Última versión: HTML 5.3</h2>
+    <img src="https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw" alt="Imagen de cuete">
+    <p>LHTML, siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web.</p>
+  </ion-slide>
+  
+  <ion-slide name="two">
+    <ion-icon name="close"></ion-icon>
+    <h1>CSS</h1>
+    <h2>Última versión: CSS3</h2>
+    <img src="https://play-lh.googleusercontent.com/RTAZb9E639F4JBcuBRTPEk9_92I-kaKgBMw4LFxTGhdCQeqWukXh74rTngbQpBVGxqo" alt="Imagen de cuete">
+    <p>CSS, en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.​</p>
+  </ion-slide>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-slide name="three">
+    <ion-icon name="close"></ion-icon>
+    <h1>JavaScript</h1>
+    <h2>Lenguaje de programación</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCFmj9qg68AFAx8H7Xo5x20h4Ozi3ug1gXUdKqKnSBUfMdXuOKxMCpV4nsVecAwPNjwPs&usqp=CAU" alt="Imagen de cuete">
+    <p>JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, ​ basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
+  </ion-slide>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-slide name="four">
+    <ion-icon name="close"></ion-icon>
+    <h1>Angular</h1>
+    <h2>Framework</h2>
+    <img src="https://miro.medium.com/max/1176/1*u9gVOJowwDqQUEKtSqxzEA.png" alt="Imagen de cuete">
+    <p>Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página.</p>
+  </ion-slide>
+</ion-slides>
 </ion-content>
