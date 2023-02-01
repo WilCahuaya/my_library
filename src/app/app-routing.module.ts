@@ -26,6 +26,18 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule),canActivate:[IntroGuard,LoginGuard]
   },
+  {
+    path: 'books-modal',
+    loadChildren: () => import('./books-modal/books-modal.module').then( m => m.BooksModalPageModule)
+  },
+  {
+    path: 'book-modal',
+    loadChildren: () => import('./book-modal/book-modal.module').then( m => m.BookModalPageModule)
+  },
+  {
+    path: 'author-modal',
+    loadChildren: () => import('./author-modal/author-modal.module').then( m => m.AuthorModalPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { AnyARecord } from 'dns';
 import { Storage } from '@ionic/storage';
 import { AuthenticateService } from '../services/authenticate.service';
@@ -46,7 +46,7 @@ export class RegisterPage implements OnInit {
   }
 
   errorMessage: any;
-  constructor(private navCtrl: NavController, private formBuilder:FormBuilder, private storage:Storage,private authenticate:AuthenticateService) { 
+  constructor(private navCtrl: NavController, private formBuilder:FormBuilder, private storage:Storage,private authenticate:AuthenticateService, private alertController:AlertController) { 
     this.registerForm=this.formBuilder.group({
       name:new FormControl(
         "",
@@ -104,8 +104,21 @@ export class RegisterPage implements OnInit {
  registerUser(register_form:any){
   this.authenticate.registerUser(register_form).then(()=>{
     this.navCtrl.navigateForward("/login");
+  }).catch(err => {
+    this.presentAlert("Opps", "Hubo un error", err);
   })
  }
+ async presentAlert(header: any, subHeader: any, message: any) {
+  const alert = await this.alertController.create(
+    {
+      header: header,
+      subHeader: subHeader,
+      message: message,
+      buttons: ['Ok']
+    }
+  );
+  await alert.present();
+}
 
  setValueTypeDocument(elegido:any){
   console.log(elegido);
@@ -116,4 +129,5 @@ export class RegisterPage implements OnInit {
   console.log(elegidoCareer);
   this.elegidoCareer=this.elegidoCareer;
  }
+ 
 }

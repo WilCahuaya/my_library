@@ -19,28 +19,34 @@ export class IntroPage implements OnInit {
   //crear el objeto slides
   slides=[
     {
-      title:"HTML",
-      subtitle:"Última versión: HTML 5.3",
-      img:"https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw",
-      description:"LHTML, siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web."
+      title:"William Shakespeare",
+      subtitle:"Autores como:",
+      img:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/1200px-Shakespeare.jpg",
+      description:"William Shakespeare ​ fue un dramaturgo, poeta y actor inglés. Conocido en ocasiones como el Bardo de Avon, se le considera el escritor más importante en lengua inglesa y uno de los más célebres de la literatura universal.​"
     },
     {
-      title:"CSS",
-      subtitle:"Última versión: CSS3",
-      img:"https://play-lh.googleusercontent.com/RTAZb9E639F4JBcuBRTPEk9_92I-kaKgBMw4LFxTGhdCQeqWukXh74rTngbQpBVGxqo",
-      description:"CSS, en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado."
+      title:"Gabriel García Márquez",
+      subtitle:"Autores como:",
+      img:"https://www.parlamentoandino.org/images/1Gabriel-Garca-Mrquez.png",
+      description:"Gabriel José de la Concordia García Márquez ​​ fue un escritor y periodista colombiano. Reconocido principalmente por sus novelas y cuentos, también escribió narrativa de no ficción, discursos, reportajes, críticas cinematográficas y memorias. Fue conocido como Gabo, y familiarmente y por sus amigos como Gabito.​​​"
     },
     {
-      title:"JavaScript",
-      subtitle:"Lenguaje de programación",
-      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCFmj9qg68AFAx8H7Xo5x20h4Ozi3ug1gXUdKqKnSBUfMdXuOKxMCpV4nsVecAwPNjwPs&usqp=CAU",
-      description:"JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, ​ basado en prototipos, imperativo, débilmente tipado y dinámico."
+      title:"Charles Dickens",
+      subtitle:"Autores como:",
+      img:"https://cadenaser.com/resizer/KdDaTobLsTMPLuaotcDkFjI6t6c=/1200x900/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/73OM5G7AGFMALMKBYD2R4WUDSA.jpg",
+      description:"Charles John Huffam Dickens fue un escritor inglés. Creó algunos de los personajes de ficción más conocidos en el mundo y muchos lo consideran el mejor novelista de la época victoriana.​"
     },
     {
-      title:"Angular",
-      subtitle:"Framework",
-      img:"https://miro.medium.com/max/1176/1*u9gVOJowwDqQUEKtSqxzEA.png",
-      description:"Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página."
+      title:"Oscar Wilde",
+      subtitle:"Autores como:",
+      img:"https://www.elcorreo.com/xlsemanal/wp-content/uploads/sites/5/2021/10/oscar-wilde-vida-muerte-aniversario-carcel-homosexual-cartas-poeta-COR-2.psd_.jpg",
+      description:"Oscar Fingal O'Flahertie Wills Wilde​, conocido como Oscar Wilde, fue un escritor, poeta y dramaturgo de origen irlandés.​Wilde es considerado uno de los dramaturgos más destacados del Londres victoriano tardío. Además, fue una celebridad de la época debido a su gran y aguzado ingenio.​"
+    },
+    {
+      title:"Franz Kafka",
+      subtitle:"Autores como:",
+      img:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Franz_Kafka%2C_1923.jpg/440px-Franz_Kafka%2C_1923.jpg",
+      description:"Kafka (1883-1924) es considerado como uno de los escritores más influyentes en la literatura universal, pionero en la mezcla del realismo y lo fantástico.​"
     }
   ]
   

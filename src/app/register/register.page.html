@@ -14,20 +14,21 @@
   <ion-list>
     <ion-item>
       <ion-label>Tipo de documento</ion-label>
-      <ion-select value="DNI" [(ngModel)]="elegido" (ionChange)="setValueTypeDocument(elegido)">
-        <ion-select-option value="DNI">DNI</ion-select-option>
-        <ion-select-option value="RUC">RUC</ion-select-option>
-        <ion-select-option value="RFC">RFC</ion-select-option>
+      <ion-select value="cc" [(ngModel)]="elegido" (ionChange)="setValueTypeDocument(elegido)">
+        <ion-select-option value="cc">CC</ion-select-option>
+        <ion-select-option value="ti">TI</ion-select-option>
+        <ion-select-option value="ce">CE</ion-select-option>
+        <ion-select-option value="ps">PS</ion-select-option>
+        <ion-select-option value="rc">RC</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Carrera</ion-label>
       <ion-select [(ngModel)]="elegidoCareer" (ionChange)="setValueTypeDocumentCareer(elegidoCareer)">
-        <ion-select-option value="Ing. Sistemas">Ing. Sistemas</ion-select-option>
-        <ion-select-option value="Ing. de Software">Ing. de Software</ion-select-option>
-        <ion-select-option value="Scrum Master">Scrum Master</ion-select-option>
-        <ion-select-option value="Diseñador UI">Diseñador UI</ion-select-option>
-        <ion-select-option value="Diseñador UX">Diseñador UX</ion-select-option>
+        <ion-select-option value="sistemas">Ing. Sistemas</ion-select-option>
+        <ion-select-option value="industrial">Ing. Industrial</ion-select-option>
+        <ion-select-option value="contaduria">Contaduria</ion-select-option>
+        <ion-select-option value="administracion">Administracion</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-list>

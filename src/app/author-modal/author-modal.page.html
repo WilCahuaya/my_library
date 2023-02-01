@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{author.name}}</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="ion-justify-content-center ion-margin-top">
+    <ion-col size="6">
+      <div><ion-avatar >
+        <img src="{{author.photo}}">
+    </ion-avatar></div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col class="icons" size="6">
+      <ion-list class="icons" lines="none">
+        <ion-item>
+          <ion-icon name="heart-sharp" class="ion-margin-end"></ion-icon>
+          <ion-text>{{author.followers}} </ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+    <ion-col class="icons" size="6">
+      <ion-list class="icons" lines="none">
+        <ion-item>
+          <ion-icon name="star" class="ion-margin-end"></ion-icon>
+          <ion-text>{{author.popularity}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-list-header lines="inset">
+      <ion-label>Nombre:</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-text>{{author.name}}</ion-text>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header lines="inset">
+      <ion-label>Generos:</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-text *ngFor="let gender of author.genres" class="ion-margin">{{gender}}</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header lines="inset">
+      <ion-label>Libros:</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let book of books" >
+      <ion-text>{{book.name}}</ion-text>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{book.name}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!like_button" (click)="like()">
+        <ion-icon name="heart-outline"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="like_button" (click)="disLike()">
+        <ion-icon name="heart-dislike-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <img src="{{book.cover}}" alt="">
+      </ion-col>
+      <ion-col size="6">
+        <div>
+          <h1> <strong>{{book.name}}</strong></h1>
+          <ion-text *ngFor="let author of authors">
+            <h4 *ngIf="author.id==book.author_id">
+              {{author.name}}
+            </h4>
+          </ion-text>
+          <ion-text >
+            <h4>#Paginas {{book.pages}}</h4>
+          </ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-content>
+    <ion-list>
+      <ion-list-header lines="inset">
+        <ion-label>Resumen</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-textarea [autoGrow]="true"
+    value="{{book.resumen}}">
+  </ion-textarea>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header lines="inset">
+        <ion-label>Editorial</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-text>{{book.editorial}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header lines="inset">
+        <ion-label>Genero</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-text *ngFor="let gender of book.genres" class="ion-margin">{{gender}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header lines="inset">
+        <ion-label>Publicado en</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-text><ion-icon name="calendar-outline"></ion-icon> {{book.published_date}}</ion-text>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>
